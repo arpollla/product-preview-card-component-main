@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: row;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
@@ -101,7 +101,7 @@ button:hover {
     font-size: 11px;
     text-align: center;
     width: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0;
 }
 .attribution a {
