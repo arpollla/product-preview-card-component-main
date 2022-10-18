@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --veryDarkCyan: hsl(158, 37%, 26%);
+    --cream: hsl(30, 38%, 92%);
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--cream);
+    font-size: 14px;
+    font-family:  'Montserrat', sans-serif;
+}
+
+.card {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.productImg img{
+    float: left;
+    width: 100%;
+}
+
+.productInfo {
+    width: 90%;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.productType {
+    letter-spacing: 0.3em;
+    color: var(--darkGrayishBlue);
+    font-size: 12px;
+}
+
+h1 {
+    font-family: 'Fraunces';
+    margin: 1em 0;
+}
+
+.productIntro {
+    color: var(--darkGrayishBlue);
+}
+
+.price h1 {
+    display: inline-block;
+    color: var(--darkCyan);
+    vertical-align: middle;
+}
+
+.price span {
+    color: var(--darkGrayishBlue);
+    text-decoration: line-through;
+    vertical-align: middle;
+    padding: 1em;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--darkCyan);
+    height: 3em;
+    border: none;
+    border-radius: 1em;
+}
+
+button img {
+    vertical-align: middle;
+}
+
+button text {
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: var(--veryDarkCyan);
+    cursor: pointer;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:376px) {
+    .card {
+        width: 360px;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .productImg img{
+        content: url(/images/image-product-mobile.jpg);
+        width: 100%;
+    }
+
+    h1 {
+        margin: 0.5em 0;
+    }
+    
+    .productInfo {
+        width: 100%;
+    }
+}
